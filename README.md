@@ -1,7 +1,7 @@
 # geoapi_test
 **Sample GeoAPI test for PNN**
 
-* *DOCKER Build*
+* *DOCKER Build*:
   Since cloned, enter repository dir and execute:
   ```bash
   $ docker build -t geoapi:latest .
@@ -11,4 +11,5 @@
   $ docker run -p 5000:5000 geoapi
   >... server output
   ```
-  
+  * *virtualenv Build*:
+  OS Requeriments
