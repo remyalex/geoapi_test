@@ -11,5 +11,17 @@
   $ docker run -p 5000:5000 geoapi
   >... server output
   ```
-  * *virtualenv Build*:
-  OS Requeriments
+* *Python virtualenv Build*:
+  OS Requeriments:
+  * Python=>3.5
+  * Pip=>20
+  * virtualenv => A guide to install and create envs: [Virtualenv Python](https://gist.github.com/Geoyi/d9fab4f609e9f75941946be45000632b)
+  
+  Activate created venv and execute (on geoapi path):
+   ```bash
+  $ pip install -r requeriments.txt
+  >... (Dependecies must be installed)
+  $ python geoapy.py
+  >... (geoapi output)
+  ```
+  
