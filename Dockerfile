@@ -3,9 +3,8 @@ FROM ubuntu:16.04
 MAINTAINER Remy Galan "remyalexander@gmail.com"
 
 RUN apt-get update -y && \
-    apt-get install -y python3-pip python3-dev python3-rtree
+    apt-get install -y python3-pip python3-dev python3-tk python3-rtree
 
-# We copy just the requirements.txt first to leverage Docker cache
 COPY ./requirements.txt /app/requirements.txt
 
 WORKDIR /app
