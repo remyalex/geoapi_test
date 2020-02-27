@@ -75,7 +75,7 @@ class Intersect(Resource):
 
 class PrintMap(Resource):
     def get(self, filename):
-        runapDF = gp.read_file(urlptos)
+        runapDF = gp.read_file(urlDptos)
         print (str(datetime.now()) + ' - (GET) RUNAP feats: ' + str(len(runapDF)))
         runapDF.plot()
         plt.savefig(UPLOAD_DIRECTORY+'/'+filename+'_'+datetime.now().strftime('%Y%m%d%H%M%S') +'.png')
