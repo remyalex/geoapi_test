@@ -4,6 +4,7 @@ from flask_restful import Resource, Api
 from datetime import datetime
 import pandas as pd
 import geopandas as gp
+import matplotlib.pyplot as plt
 import zipfile
 
 app = Flask(__name__)
@@ -72,7 +73,16 @@ class Intersect(Resource):
         zip.close()
         return zip
 
+class PrintMap(Resource):
+    def get(self, filename):
+        runapDF = gp.read_file(urlDptos)
+        print (str(datetime.now()) + ' - (GET) RUNAP feats: ' + str(len(runapDF)))
+        runapDF.plot()
+        plt.savefig(UPLOAD_DIRECTORY+'/'+filename+'.jpg')
+        return send_from_directory(UPLOAD_DIRECTORY, filename+'.jpg', as_attachment=False)
+
 api.add_resource(Intersect, '/intersect/<filename>')
+api.add_resource(PrintMap, '/printMap/<filename>')
 
 if __name__ == '__main__':
  app.run(debug=True, host='0.0.0.0')

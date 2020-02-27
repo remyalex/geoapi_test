@@ -5,4 +5,5 @@ pyproj==2.5.0
 Rtree==0.9.4
 Fiona==1.8.13
 Shapely==1.7.0
+matplotlib==3.0.3
 geopandas==0.7.0
