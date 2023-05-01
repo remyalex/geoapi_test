@@ -1,5 +1,5 @@
 numpy==1.18.1
-Flask==1.1.1
+Flask==2.3.2
 Flask_RESTful==0.3.8
 pyproj==2.5.0
 Rtree==0.9.4
